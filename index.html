@@ -2,38 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>travelclover</title>
-
-    <style>
-        .wrap {
-            display: flex;
-            display: -webkit-flex;
-            justify-content: center;
-            -webkit-justify-content: center;
-            align-items: center;
-            -webkit-align-items: center;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .wrap p {
-            font-size: 80px;
-            font-weight: bold;
-        }
-    </style>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>travelclover</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <!--<link rel="stylesheet" href="./index.css">-->
+<link href="https://www.notehut.cn/css/main.6dcf6121a86252eb52a0.css" rel="stylesheet"></head>
 
 <body>
-
-    <div class="wrap">
-        <p>travelclover</p>
+  <div class="bg-img"></div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide page-1">
+        <div class="mask"></div>
+        <p class="ani name" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">travelclover</p>
+        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">&lt;code&gt;&lt;/code&gt;</p>
+      </div>
+      <div class="swiper-slide page-2">
+        <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容1</p>
+      </div>
+      <div class="swiper-slide page-3">
+        <p>page3</p>
+      </div>
     </div>
-</body>
+    <!-- 分页条 -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <script src="./js/jquery-1.10.1.min.js"></script>
+  <script src="./js/swiper-4.1.6.min.js"></script>
+  <script src="./js/swiper.animate1.0.3.min.js"></script>
+<script type="text/javascript" src="https://www.notehut.cn/js/vender.js"></script><script type="text/javascript" src="https://www.notehut.cn/js/main.js"></script></body>
 
 </html>
