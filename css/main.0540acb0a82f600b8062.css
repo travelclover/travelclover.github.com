@@ -1,0 +1,232 @@
+/* reset */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: 0;
+}
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+[hidefocus],
+summary {
+  outline: 0;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+}
+sup,
+sub {
+  font-size: 83%;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: inherit;
+}
+q:before,
+q:after {
+  content: none;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+label,
+summary {
+  cursor: default;
+}
+a,
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+}
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+  text-decoration: none;
+}
+body,
+textarea,
+input,
+button,
+select,
+keygen,
+legend {
+  font: 12px/1.14 arial;
+  color: #333;
+  outline: 0;
+}
+body {
+  background: #fff;
+}
+a,
+a:hover {
+  color: #333;
+}
+.page-3 .daily-sentence {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.page-3 .daily-sentence .text {
+  padding: 10px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: right;
+}
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body,
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(file:///E:/mywork/project/travelclover/dist/img/page3_bg.591fef3.jpg) center center;
+  background-size: cover;
+}
+.page-1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: url(file:///E:/mywork/project/travelclover/dist/img/page1_bg.c0a8378.jpg) center center;
+  background-size: cover;
+}
+.page-1 .mask {
+  background: url(file:///E:/mywork/project/travelclover/dist/img/page1_bg.c0a8378.jpg) center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 1s;
+}
+.page-1 .mask.blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+.page-1 p {
+  font-size: 50px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  margin: 10px 0;
+}
+.page-1 p.name {
+  font-size: 100px;
+}
+.page-2 {
+  background: #ccc;
+}
+
+/*# sourceMappingURL=main.0540acb0a82f600b8062.css.map*/
