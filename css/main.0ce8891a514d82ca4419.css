@@ -185,7 +185,7 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(./img/page3_bg.591fef3.jpg) center center;
+  background: url(https://travelclover.github.io/img/page3_bg.591fef3.jpg) center center;
   background-size: cover;
 }
 .page-1 {
@@ -197,11 +197,11 @@ body,
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  background: url(./img/page1_bg.c0a8378.jpg) center center;
+  background: url(https://travelclover.github.io/img/page1_bg.c0a8378.jpg) center center;
   background-size: cover;
 }
 .page-1 .mask {
-  background: url(./img/page1_bg.c0a8378.jpg) center center;
+  background: url(https://travelclover.github.io/img/page1_bg.c0a8378.jpg) center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -229,4 +229,4 @@ body,
   background: #ccc;
 }
 
-/*# sourceMappingURL=main.277530cb8afbfaf8a228.css.map*/
+/*# sourceMappingURL=main.0ce8891a514d82ca4419.css.map*/
