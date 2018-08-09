@@ -185,7 +185,7 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(file:///E:/mywork/project/travelclover/dist/img/page3_bg.591fef3.jpg) center center;
+  background: url(./img/page3_bg.591fef3.jpg) center center;
   background-size: cover;
 }
 .page-1 {
@@ -197,11 +197,11 @@ body,
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  background: url(file:///E:/mywork/project/travelclover/dist/img/page1_bg.c0a8378.jpg) center center;
+  background: url(./img/page1_bg.c0a8378.jpg) center center;
   background-size: cover;
 }
 .page-1 .mask {
-  background: url(file:///E:/mywork/project/travelclover/dist/img/page1_bg.c0a8378.jpg) center center;
+  background: url(./img/page1_bg.c0a8378.jpg) center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -229,4 +229,4 @@ body,
   background: #ccc;
 }
 
-/*# sourceMappingURL=main.0540acb0a82f600b8062.css.map*/
+/*# sourceMappingURL=main.277530cb8afbfaf8a228.css.map*/
