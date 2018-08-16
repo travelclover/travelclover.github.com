@@ -2001,7 +2001,30 @@ function dailySentence() {
   getData().then(function (data) {
     var text = '\u201C' + data.content + '\u201D ' + data.author + '\u300A' + data.origin + '\u300B';
     $('#dailySentenceText').text(text);
+    var height = $('#dailySentence').height();
+    $('#dailySentence').css({ bottom: -height });
   }).catch(function (err) {});
+
+  // 绑定刷新按钮
+  var $refreshBtn = $('#dailySentence .refresh-btn');
+  $refreshBtn.on('click', function () {
+    $refreshBtn.addClass('rotate');
+    getData().then(function (data) {
+      $refreshBtn.removeClass('rotate');
+      var height = $('#dailySentence').height();
+      $('#dailySentence').animate({
+        bottom: -height
+      }, function () {
+        var text = '\u201C' + data.content + '\u201D ' + data.author + '\u300A' + data.origin + '\u300B';
+        $('#dailySentenceText').text(text);
+        $('#dailySentence').animate({
+          bottom: 0
+        });
+      });
+    }).catch(function (err) {
+      $refreshBtn.removeClass('rotate');
+    });
+  });
 }
 
 exports.default = dailySentence;
@@ -2052,11 +2075,17 @@ $(function () {
           $('.page-1 .mask').addClass('blur');
         }
         swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+
+        var dailySentenceHeight = $('#dailySentence').height(); // 'dailySentence'的高度
         if (this.activeIndex == 2) {
           // 为page3时
-          $('#dailySentence').fadeIn("slow"); // 显示“每日一句”
+          $('#dailySentence').animate({
+            bottom: 0
+          }); // 显示“每日一句”
         } else {
-          $('#dailySentence').fadeOut();
+          $('#dailySentence').animate({
+            bottom: -dailySentenceHeight
+          });
         }
       }
     }

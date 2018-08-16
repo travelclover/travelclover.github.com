@@ -152,7 +152,6 @@ a:hover {
   color: #333;
 }
 .page-3 .daily-sentence {
-  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -164,6 +163,26 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   text-align: right;
+}
+.page-3 .daily-sentence .refresh-btn {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: inline-block;
+}
+.page-3 .daily-sentence .refresh-btn:hover {
+  color: #ffffff;
+}
+.page-3 .daily-sentence .refresh-btn.rotate {
+  animation: rotate 2s linear 0s infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 html {
   position: absolute;
@@ -229,4 +248,4 @@ body,
   background: #ccc;
 }
 
-/*# sourceMappingURL=main.0ce8891a514d82ca4419.css.map*/
+/*# sourceMappingURL=main.3abdca2c2d0e31416618.css.map*/
