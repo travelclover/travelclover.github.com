@@ -230,8 +230,7 @@ body,
   transition: all 1s;
 }
 .page-1 .mask.blur {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  filter: blur(5px);
 }
 .page-1 p {
   font-size: 50px;
@@ -248,4 +247,4 @@ body,
   background: #ccc;
 }
 
-/*# sourceMappingURL=main.3abdca2c2d0e31416618.css.map*/
+/*# sourceMappingURL=main.af0a00a914e1645eb69c.css.map*/

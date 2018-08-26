@@ -36,17 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -2003,7 +2018,10 @@ function dailySentence() {
     $('#dailySentenceText').text(text);
     var height = $('#dailySentence').height();
     $('#dailySentence').css({ bottom: -height });
-  }).catch(function (err) {});
+  }).catch(function (err) {
+    // eslint-disable-next-line no-console
+    console.log(err);
+  });
 
   // 绑定刷新按钮
   var $refreshBtn = $('#dailySentence .refresh-btn');
@@ -2023,6 +2041,8 @@ function dailySentence() {
       });
     }).catch(function (err) {
       $refreshBtn.removeClass('rotate');
+      // eslint-disable-next-line no-console
+      console.log(err);
     });
   });
 }
@@ -2041,18 +2061,17 @@ exports.default = dailySentence;
 "use strict";
 
 
+__webpack_require__(/*! ./style/index.less */ "./src/style/index.less");
+
 var _dailySentence = __webpack_require__(/*! ./controller/dailySentence.js */ "./src/controller/dailySentence.js");
 
 var _dailySentence2 = _interopRequireDefault(_dailySentence);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var indexCss = __webpack_require__(/*! ./style/index.less */ "./src/style/index.less");
-
-
 // 文档就绪
 $(function () {
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new window.Swiper('.swiper-container', {
     direction: 'vertical', // 垂直滚动
     mousewheel: true, // 开启鼠标滚轮控制Swiper切换
     simulateTouch: false, // 设置为false后鼠标拖动无效，移动端仍可正常滑动。
@@ -2061,8 +2080,8 @@ $(function () {
     // },
     on: {
       init: function init() {
-        swiperAnimateCache(this); //隐藏动画元素
-        swiperAnimate(this); //初始化完成开始动画
+        window.swiperAnimateCache(this); //隐藏动画元素
+        window.swiperAnimate(this); //初始化完成开始动画
         setTimeout(function () {
           $('.page-1 .mask').addClass('blur');
         }, 500);
@@ -2074,7 +2093,7 @@ $(function () {
         } else {
           $('.page-1 .mask').addClass('blur');
         }
-        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        window.swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
 
         var dailySentenceHeight = $('#dailySentence').height(); // 'dailySentence'的高度
         if (this.activeIndex == 2) {
@@ -2090,6 +2109,7 @@ $(function () {
       }
     }
   });
+  mySwiper.updateSize();
 
   // 每日一句
   (0, _dailySentence2.default)();
